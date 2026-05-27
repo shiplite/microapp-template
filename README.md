@@ -5,7 +5,7 @@ Starter template for shipping micro-tools fast.
 ## Stack
 
 - **Laravel 13** + PHP 8.3+
-- **Livewire 4** + Volt (single-file components)
+- **Livewire 4** (classic components)
 - **Tailwind CSS 4**
 - **SQLite** (zero-config database)
 - **Vite** (asset bundling)
@@ -31,15 +31,18 @@ php artisan migrate
 composer run dev
 ```
 
-5. Edit `resources/views/livewire/main-tool.blade.php` — this is your tool.
+5. Edit your tool:
+   - `app/Livewire/MainTool.php` — logic
+   - `resources/views/livewire/main-tool.blade.php` — template
 
 ## Structure
 
 ```
+app/Livewire/MainTool.php                     ← component logic
 resources/views/
-├── components/layouts/app.blade.php   ← base layout
-└── livewire/main-tool.blade.php       ← your tool (Volt single-file)
-routes/web.php                         ← single route
+├── components/layouts/app.blade.php          ← base layout
+└── livewire/main-tool.blade.php              ← component template
+routes/web.php                                ← single route
 ```
 
 ## Deploy

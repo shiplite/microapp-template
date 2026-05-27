@@ -1,19 +1,3 @@
-<?php
-
-use Livewire\Volt\Component;
-use Livewire\Attributes\Layout;
-
-new #[Layout('components.layouts.app')] class extends Component {
-    public string $input = '';
-    public string $output = '';
-
-    public function process(): void
-    {
-        // Replace with your tool logic
-        $this->output = $this->input;
-    }
-} ?>
-
 <div>
     <h1 class="text-2xl font-bold mb-6">{{ config('app.name') }}</h1>
     <p class="text-zinc-600 dark:text-zinc-400 mb-8">Describe what this tool does in one sentence.</p>

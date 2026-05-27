@@ -1,6 +1,6 @@
 <?php
 
+use App\Livewire\MainTool;
 use Illuminate\Support\Facades\Route;
-use Livewire\Volt\Volt;
 
-Volt::route('/', 'main-tool');
+Route::get('/', MainTool::class)->name('main-tool');
